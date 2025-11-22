@@ -8,402 +8,10 @@
     <meta name="theme-color" content="#2E5AAC" />
     <link rel="icon" href="assets/favicon.svg" />
     <style>
-    /* ===== Color Palette from Logo ===== */
-    :root{
-      --primary-blue:#2E5AAC;
-      --accent-gold:#D4AF37;
-      --light-gold:#F4D06F;
-      --bg-cream:#FAFAFA;
-      --bg-light:#F5F5F5;
-      --bg-blue-light:#EBF2FA;
-      --text-dark:#1A3A5C;
-      --text-muted:#5A6C7D;
-      --white:#FFFFFF;
-      --shadow:rgba(46,90,172,0.1);
-    }
-    
-    *{margin:0;padding:0;box-sizing:border-box;}
-    
-    body{
-      background:linear-gradient(135deg,var(--bg-cream) 0%,var(--bg-light) 100%);
-      color:var(--text-dark);
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-      line-height:1.6;
-    }
-    
-    /* ===== Header & Nav ===== */
-    header{
-      background:var(--white);
-      box-shadow:0 2px 8px var(--shadow);
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-    
-    .header-wrap{
-      max-width:1200px;
-      margin:0 auto;
-      padding:16px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-    
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:16px;
-    }
-    
-    .brand img{
-      height:56px;
-      width:auto;
-    }
-    
-    .brand-text h1{
-      font-size:20px;
-      color:var(--primary-blue);
-      font-weight:700;
-    }
-    
-    .brand-text p{
-      font-size:13px;
-      color:var(--text-muted);
-      margin-top:2px;
-    }
-    
-    nav{display:flex;align-items:center;gap:12px;}
-    nav a{
-      color:var(--text-dark);
-      text-decoration:none;
-      padding:8px 16px;
-      border-radius:6px;
-      font-weight:500;
-      transition:all 0.3s ease;
-    }
-    
-    nav a:hover{
-      background:var(--bg-blue-light);
-      color:var(--primary-blue);
-    }
-    
-    .nav-cta{
-      background:linear-gradient(135deg,var(--primary-blue),#1E4A8C);
-      color:var(--white)!important;
-      padding:10px 20px!important;
-      box-shadow:0 4px 12px rgba(46,90,172,0.3);
-    }
-    
-    .nav-cta:hover{
-      transform:translateY(-2px);
-      box-shadow:0 6px 16px rgba(46,90,172,0.4);
-    }
-    
-    /* ===== Hero Section ===== */
-    .hero{
-      background:linear-gradient(135deg,var(--primary-blue) 0%,#1E4A8C 50%,var(--accent-gold) 100%);
-      color:var(--white);
-      padding:80px 24px;
-      text-align:center;
-    }
-    
-    .hero-content{
-      max-width:900px;
-      margin:0 auto;
-    }
-    
-    .hero h2{
-      font-size:48px;
-      font-weight:800;
-      margin-bottom:16px;
-      line-height:1.2;
-      background:linear-gradient(135deg,var(--white),var(--light-gold));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
-    }
-    
-    .hero .tagline{
-      font-size:24px;
-      color:var(--bg-cream);
-      margin-bottom:12px;
-      font-weight:600;
-    }
-    
-    .hero .description{
-      font-size:18px;
-      color:rgba(255,255,255,0.9);
-      margin-bottom:32px;
-      max-width:700px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    
-    .cta-buttons{
-      display:flex;
-      gap:16px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    
-    .btn{
-      padding:14px 32px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:16px;
-      transition:all 0.3s ease;
-      display:inline-block;
-    }
-    
-    .btn-primary{
-      background:var(--accent-gold);
-      color:var(--text-dark);
-      box-shadow:0 4px 12px rgba(212,175,55,0.4);
-    }
-    
-    .btn-primary:hover{
-      background:var(--light-gold);
-      transform:translateY(-2px);
-      box-shadow:0 6px 16px rgba(212,175,55,0.5);
-    }
-    
-    .btn-secondary{
-      background:var(--white);
-      color:var(--primary-blue);
-      box-shadow:0 4px 12px rgba(255,255,255,0.3);
-    }
-    
-    .btn-secondary:hover{
-      background:var(--bg-cream);
-      transform:translateY(-2px);
-    }
-    
-    /* ===== Features/Expertise Grid ===== */
-    .features{
-      max-width:1200px;
-      margin:60px auto;
-      padding:0 24px;
-    }
-    
-    .section-header{
-      text-align:center;
-      margin-bottom:48px;
-    }
-    
-    .section-header h3{
-      font-size:36px;
-      color:var(--primary-blue);
-      margin-bottom:12px;
-      font-weight:700;
-    }
-    
-    .section-header p{
-      font-size:18px;
-      color:var(--text-muted);
-    }
-    
-    .features-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:24px;
-    }
-    
-    .feature-card{
-      background:var(--white);
-      border-radius:12px;
-      padding:32px 24px;
-      box-shadow:0 4px 12px var(--shadow);
-      transition:all 0.3s ease;
-      border:2px solid transparent;
-    }
-    
-    .feature-card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 8px 24px var(--shadow);
-      border-color:var(--accent-gold);
-    }
-    
-    .feature-icon{
-      font-size:48px;
-      margin-bottom:16px;
-    }
-    
-    .feature-card h4{
-      font-size:22px;
-      color:var(--primary-blue);
-      margin-bottom:12px;
-      font-weight:700;
-    }
-    
-    .feature-card p{
-      color:var(--text-muted);
-      font-size:15px;
-      line-height:1.6;
-    }
-    
-    /* ===== About/Impact Section ===== */
-    .about{
-      background:var(--white);
-      padding:60px 24px;
-      margin:60px 0;
-    }
-    
-    .about-content{
-      max-width:1000px;
-      margin:0 auto;
-      text-align:center;
-    }
-    
-    .about h3{
-      font-size:36px;
-      color:var(--primary-blue);
-      margin-bottom:24px;
-      font-weight:700;
-    }
-    
-    .about p{
-      font-size:18px;
-      color:var(--text-dark);
-      margin-bottom:16px;
-      line-height:1.8;
-    }
-    
-    .stats{
-      display:flex;
-      justify-content:center;
-      gap:48px;
-      margin-top:40px;
-      flex-wrap:wrap;
-    }
-    
-    .stat{
-      text-align:center;
-    }
-    
-    .stat-number{
-      font-size:48px;
-      font-weight:800;
-      background:linear-gradient(135deg,var(--primary-blue),var(--accent-gold));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
-    }
-    
-    .stat-label{
-      font-size:16px;
-      color:var(--text-muted);
-      margin-top:8px;
-    }
-    
-    /* ===== Contact Section ===== */
-    .contact{
-      max-width:700px;
-      margin:60px auto;
-      padding:0 24px;
-    }
-    
-    .contact-card{
-      background:var(--white);
-      border-radius:12px;
-      padding:40px;
-      box-shadow:0 4px 12px var(--shadow);
-    }
-    
-    .contact h3{
-      font-size:32px;
-      color:var(--primary-blue);
-      margin-bottom:12px;
-      text-align:center;
-      font-weight:700;
-    }
-    
-    .contact p{
-      text-align:center;
-      color:var(--text-muted);
-      margin-bottom:32px;
-    }
-    
-    .contact form{
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-    }
-    
-    .contact input,.contact textarea{
-      padding:14px;
-      border-radius:8px;
-      border:2px solid var(--bg-blue-light);
-      font-family:inherit;
-      font-size:15px;
-      transition:all 0.3s ease;
-    }
-    
-    .contact input:focus,.contact textarea:focus{
-      outline:none;
-      border-color:var(--primary-blue);
-      box-shadow:0 0 0 3px rgba(46,90,172,0.1);
-    }
-    
-    .contact textarea{
-      min-height:120px;
-      resize:vertical;
-    }
-    
-    .contact button{
-      background:linear-gradient(135deg,var(--primary-blue),#1E4A8C);
-      color:var(--white);
-      padding:14px 32px;
-      border:none;
-      border-radius:8px;
-      font-size:16px;
-      font-weight:600;
-      cursor:pointer;
-      transition:all 0.3s ease;
-    }
-    
-    .contact button:hover{
-      transform:translateY(-2px);
-      box-shadow:0 6px 16px rgba(46,90,172,0.4);
-    }
-    
-    /* ===== Footer ===== */
-    footer{
-      background:var(--text-dark);
-      color:var(--white);
-      padding:32px 24px;
-      text-align:center;
-    }
-    
-    footer p{
-      margin-bottom:8px;
-    }
-    
-    footer a{
-      color:var(--accent-gold);
-      text-decoration:none;
-    }
-    
-    footer a:hover{
-      text-decoration:underline;
-    }
-    
-    /* ===== Responsive ===== */
-    @media (max-width:768px){
-      .hero h2{font-size:36px;}
-      .hero .tagline{font-size:20px;}
-      .hero .description{font-size:16px;}
-      .section-header h3{font-size:28px;}
-      .about h3{font-size:28px;}
-      .contact h3{font-size:28px;}
-      .header-wrap{flex-direction:column;}
-      nav{flex-wrap:wrap;justify-content:center;}
-    }
+    :root{--primary-blue:#2E5AAC;--accent-gold:#D4AF37;--light-gold:#F4D06F;--bg-cream:#FAFAFA;--bg-light:#F5F5F5;--bg-blue-light:#EBF2FA;--text-dark:#1A3A5C;--text-muted:#5A6C7D;--white:#FFFFFF;--shadow:rgba(46,90,172,0.1)}*{margin:0;padding:0;box-sizing:border-box}body{background:linear-gradient(135deg,var(--bg-cream) 0%,var(--bg-light) 100%);color:var(--text-dark);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6}header{background:var(--white);box-shadow:0 2px 8px var(--shadow);position:sticky;top:0;z-index:100}.header-wrap{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:16px}.brand img{height:56px;width:auto}.brand-text h1{font-size:20px;color:var(--primary-blue);font-weight:700}.brand-text p{font-size:13px;color:var(--text-muted);margin-top:2px}nav{display:flex;align-items:center;gap:12px}nav a{color:var(--text-dark);text-decoration:none;padding:8px 16px;border-radius:6px;font-weight:500;transition:all .3s ease}nav a:hover{background:var(--bg-blue-light);color:var(--primary-blue)}.nav-cta{background:linear-gradient(135deg,var(--primary-blue),#1E4A8C);color:var(--white)!important;padding:10px 20px!important;box-shadow:0 4px 12px rgba(46,90,172,.3)}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(46,90,172,.4)}.hero{background:linear-gradient(135deg,var(--primary-blue) 0%,#1E4A8C 50%,var(--accent-gold) 100%);color:var(--white);padding:80px 24px;text-align:center}.hero-content{max-width:900px;margin:0 auto}.hero h2{font-size:48px;font-weight:800;margin-bottom:16px;line-height:1.2;background:linear-gradient(135deg,var(--white),var(--light-gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero .tagline{font-size:24px;color:var(--bg-cream);margin-bottom:12px;font-weight:600}.hero .description{font-size:18px;color:rgba(255,255,255,.9);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto}.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}.btn{padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;transition:all .3s ease;display:inline-block}.btn-primary{background:var(--accent-gold);color:var(--text-dark);box-shadow:0 4px 12px rgba(212,175,55,.4)}.btn-primary:hover{background:var(--light-gold);transform:translateY(-2px);box-shadow:0 6px 16px rgba(212,175,55,.5)}.btn-secondary{background:var(--white);color:var(--primary-blue);box-shadow:0 4px 12px rgba(255,255,255,.3)}.btn-secondary:hover{background:var(--bg-cream);transform:translateY(-2px)}.features{max-width:1200px;margin:60px auto;padding:0 24px}.section-header{text-align:center;margin-bottom:48px}.section-header h3{font-size:36px;color:var(--primary-blue);margin-bottom:12px;font-weight:700}.section-header p{font-size:18px;color:var(--text-muted)}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}.feature-card{background:var(--white);border-radius:12px;padding:32px 24px;box-shadow:0 4px 12px var(--shadow);transition:all .3s ease;border:2px solid transparent}.feature-card:hover{transform:translateY(-8px);box-shadow:0 8px 24px var(--shadow);border-color:var(--accent-gold)}.feature-icon{font-size:48px;margin-bottom:16px}.feature-card h4{font-size:22px;color:var(--primary-blue);margin-bottom:12px;font-weight:700}.feature-card p{color:var(--text-muted);font-size:15px;line-height:1.6}.about{background:var(--white);padding:60px 24px;margin:60px 0}.about-content{max-width:1000px;margin:0 auto;text-align:center}.about h3{font-size:36px;color:var(--primary-blue);margin-bottom:24px;font-weight:700}.about p{font-size:18px;color:var(--text-dark);margin-bottom:16px;line-height:1.8}.stats{display:flex;justify-content:center;gap:48px;margin-top:40px;flex-wrap:wrap}.stat{text-align:center}.stat-number{font-size:48px;font-weight:800;background:linear-gradient(135deg,var(--primary-blue),var(--accent-gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.stat-label{font-size:16px;color:var(--text-muted);margin-top:8px}.contact{max-width:700px;margin:60px auto;padding:0 24px}.contact-card{background:var(--white);border-radius:12px;padding:40px;box-shadow:0 4px 12px var(--shadow)}.contact h3{font-size:32px;color:var(--primary-blue);margin-bottom:12px;text-align:center;font-weight:700}.contact p{text-align:center;color:var(--text-muted);margin-bottom:32px}.contact form{display:flex;flex-direction:column;gap:16px}.contact input,.contact textarea{padding:14px;border-radius:8px;border:2px solid var(--bg-blue-light);font-family:inherit;font-size:15px;transition:all .3s ease}.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--primary-blue);box-shadow:0 0 0 3px rgba(46,90,172,.1)}.contact textarea{min-height:120px;resize:vertical}.contact button{background:linear-gradient(135deg,var(--primary-blue),#1E4A8C);color:var(--white);padding:14px 32px;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:all .3s ease}.contact button:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(46,90,172,.4)}footer{background:var(--text-dark);color:var(--white);padding:32px 24px;text-align:center}footer p{margin-bottom:8px}footer a{color:var(--accent-gold);text-decoration:none}footer a:hover{text-decoration:underline}@media (max-width:768px){.hero h2{font-size:36px}.hero .tagline{font-size:20px}.hero .description{font-size:16px}.section-header h3{font-size:28px}.about h3{font-size:28px}.contact h3{font-size:28px}.header-wrap{flex-direction:column}nav{flex-wrap:wrap;justify-content:center}}
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-wrap">
             <div class="brand">
@@ -421,8 +29,6 @@
             </nav>
         </div>
     </header>
-    
-    <!-- Hero -->
     <main class="hero">
         <div class="hero-content">
             <div class="tagline">🚀 Innovating at the Intersection of Hardware & AI</div>
@@ -434,8 +40,6 @@
             </div>
         </div>
     </main>
-    
-    <!-- Expertise/Features -->
     <section id="expertise" class="features">
         <div class="section-header">
             <h3>Four Pillars of Innovation</h3>
@@ -445,4 +49,63 @@
             <div class="feature-card">
                 <div class="feature-icon">🔧</div>
                 <h4>FPGA & Hardware Engineering</h4>
-                <p>Moku:Go instruments, lock-in amplifiers, demodulators, and custom FPGA designs. 3+ years of testing, calibration, and deployment expertise with Liquid Instruments platforms.
+                <p>Moku:Go instruments, lock-in amplifiers, demodulators, and custom FPGA designs. 3+ years of testing, calibration, and deployment expertise with Liquid Instruments platforms.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h4>AI & GenAI Solutions</h4>
+                <p>Custom GPT agents, AI-driven signal analysis pipelines, RAG systems, and automation workflows. Building intelligent systems that bridge hardware and software.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h4>Engineering Education</h4>
+                <p>VTU curriculum development, faculty training programs, and lab instrumentation deployment across engineering colleges. Empowering the next generation of engineers.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h4>Research & Development</h4>
+                <p>Research-grade prototyping, test vectors, measurement automation, and instrumentation documentation for advanced R&D applications and academic research.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-content">
+            <h3>About Mahaveer & Xenith Brand Labs</h3>
+            <p><strong>Xenith Brand Labs</strong> is led by <strong>Mahaveer R. Savanur</strong>, a technology entrepreneur and engineer-educator with deep expertise in FPGA testing, hardware measurement, and AI integration.</p>
+            <p>As a Junior Engineer at Spruha Build-in Solutions (Liquid Instruments Moku Go dealer), Mahaveer combines 3+ years of hands-on hardware experience with cutting-edge AI innovation to create transformative solutions for engineering education and research.</p>
+            <p>From VTU curriculum approval to faculty development training at institutions like RNSIT, Mahaveer is driving the future of instrumentation education across India.</p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Engineering Colleges</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Students Impacted</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">AI Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="contact-card">
+            <h3>Get in Touch</h3>
+            <p>Interested in FPGA prototypes, AI solutions, or faculty training? Let's collaborate!</p>
+            <form action="mailto:contact@xenithbrandlabs.com" method="post" enctype="text/plain">
+                <input name="name" placeholder="Your Name" required />
+                <input name="email" type="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Tell us about your project or inquiry" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>© <span id="year"></span> Xenith Brand Labs — Built by Mahaveer R. Savanur</p>
+        <p>Hosted on GitHub Pages • <a href="https://www.linkedin.com/in/mahaveer-savanur" target="_blank">Connect on LinkedIn</a></p>
+    </footer>
+    <script>document.getElementById('year').innerText=new Date().getFullYear();</script>
+</body>
+</html>
