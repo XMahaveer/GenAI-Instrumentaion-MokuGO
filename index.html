@@ -8,56 +8,52 @@
   <meta name="theme-color" content="#0b0b0d"/>
   <link rel="icon" href="assets/favicon.svg" />
   <style>
-    /* Silver + Gold palette inspired by Xspace */
-    :root{
-      --bg:#0b0b0d;
-      --panel: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      --muted:#b9c0c6;
-      --silver-100:#d8dbe0;
-      --silver-200:#bfc6cc;
-      --gold-100:#e6c77a;
-      --gold-200:#caa94a;
-      --accent: linear-gradient(90deg,#e6c77a,#ffd786 60%,#f1d27a);
-      --glass: rgba(255,255,255,0.03);
-      --radius:16px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
+  /* ---- Improved visual theme: brighter hero, gold accent, bigger logo ---- */
+:root{
+  --bg:#0b0b0d;
+  --panel-bg: rgba(250,250,250,0.04); /* lighter panel */
+  --muted:#bcc3c8;
+  --silver-100:#e6e9ec;
+  --gold-100:#f2d587;
+  --gold-200:#d4b25a;
+  --accent: linear-gradient(90deg, #ffd786, #e6c77a 60%);
+  --glass: rgba(255,255,255,0.04);
+  --radius:16px;
+  --card-shadow: 0 10px 40px rgba(3,6,10,0.65);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
 
-    html,body{height:100%; margin:0; background: radial-gradient(1200px 700px at 10% 10%, rgba(255,255,255,0.012), transparent 6%), #07070a; color:var(--silver-100); -webkit-font-smoothing:antialiased;}
-    .wrap{max-width:1100px; margin:36px auto; padding:28px;}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px;}
-    .brand{display:flex; align-items:center; gap:14px;}
-    .brand img{height:64px; width:auto; border-radius:12px; padding:6px; background:var(--glass); box-shadow:0 6px 20px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03);}
-    .brand h1{font-size:20px; margin:0; letter-spacing:0.2px; font-weight:700; color:var(--silver-100);}
-    .brand p{margin:0; color:var(--muted); font-size:12px;}
-    nav{display:flex; gap:12px; align-items:center;}
-    nav a{color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; padding:8px 10px; border-radius:10px;}
-    nav a.cta{background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--silver-100);}
+/* Page base */
+html,body { background: linear-gradient(180deg,#060609 0%, #0f1012 100%); color:var(--silver-100); margin:0; -webkit-font-smoothing:antialiased; }
 
-    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; margin-top:28px; align-items:start;}
-    .card{background:var(--panel); border-radius:18px; padding:28px; box-shadow: 0 8px 32px rgba(0,0,0,0.7); border:1px solid rgba(255,255,255,0.03);}
-    h2{margin:0; font-size:30px; color:var(--silver-100); line-height:1.05;}
-    .lead{color:var(--muted); margin-top:8px; font-size:15px;}
+/* Header and logo */
+.header-wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; max-width:1100px; margin:28px auto; padding:0 20px; }
+.brand img{ height:72px; width:auto; border-radius:10px; background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(0,0,0,0.02)); padding:8px; box-shadow: 0 6px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03); }
 
-    .cta-row{display:flex; gap:12px; margin-top:18px;}
-    .btn{
-      padding:12px 18px; border-radius:12px; font-weight:700; border:0; cursor:pointer;
-      background: linear-gradient(90deg, rgba(255,215,0,0.15), rgba(255,160,0,0.12));
-      color:#0b0b0d;
-      box-shadow: 0 6px 20px rgba(255,180,0,0.06);
-      backdrop-filter: blur(6px);
-    }
-    .btn.ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04);}
+/* Improve hero visibility: lighter card with stronger inner contrast */
+.hero-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.03));
+  border-radius:20px; padding:34px; box-shadow:var(--card-shadow); border:1px solid rgba(255,255,255,0.03);
+  color: #f5f7f8;
+}
+.hero-card h2{ font-size:34px; line-height:1.02; margin:0 0 10px; color:#ffffff; text-shadow:0 1px 0 rgba(0,0,0,0.5); }
+.lead{ color:var(--muted); font-size:15px; margin-bottom:18px; }
 
-    .features{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px;}
-    .feature{padding:14px; border-radius:12px; background:rgba(255,255,255,0.02); color:var(--muted);}
-    .feature h4{margin:0 0 8px; color:var(--silver-100);}
+/* CTA enhanced */
+.btn{ background: var(--gold-100); color:#081015; padding:12px 20px; border-radius:12px; font-weight:800; text-decoration:none; display:inline-block; box-shadow: 0 8px 30px rgba(230,190,90,0.12); }
+.btn-ghost{ border:1px solid rgba(255,255,255,0.06); color:var(--muted); background:transparent; padding:10px 16px; border-radius:12px; }
 
-    aside.mock{display:block;}
-    .mock img{width:100%; border-radius:12px; display:block; box-shadow:0 10px 40px rgba(0,0,0,0.6);}
+/* Features grid: slightly lighter tiles */
+.features .tile{ background: rgba(255,255,255,0.02); border-radius:12px; padding:14px; color:var(--muted); }
 
-    section#products{margin-top:26px;}
-    footer{margin-top:36px; display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:13px;}
+/* Right-side mockup card (contrast boost) */
+.aside-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)); border-radius:16px; padding:18px; box-shadow: 0 8px 28px rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.02); color:var(--muted); }
+
+/* Make text crisper on smaller screens */
+@media (max-width:900px){
+  .brand img{ height:64px; }
+  .hero-card h2{ font-size:28px; }
+}
 
     /* Accent ribbon */
     .ribbon{
