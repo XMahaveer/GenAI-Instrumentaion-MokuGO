@@ -1,111 +1,292 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Xenith Brand Labs — AI + Instrumentation Innovation</title>
-    <meta name="description" content="Xenith Brand Labs — Pioneering FPGA instruments, AI engineering, and research-driven prototyping. Led by Mahaveer R. Savanur." />
-    <meta name="theme-color" content="#2E5AAC" />
-    <link rel="icon" href="assets/favicon.svg" />
-    <style>
-    :root{--primary-blue:#2E5AAC;--accent-gold:#D4AF37;--light-gold:#F4D06F;--bg-cream:#FAFAFA;--bg-light:#F5F5F5;--bg-blue-light:#EBF2FA;--text-dark:#1A3A5C;--text-muted:#5A6C7D;--white:#FFFFFF;--shadow:rgba(46,90,172,0.1)}*{margin:0;padding:0;box-sizing:border-box}body{background:linear-gradient(135deg,var(--bg-cream) 0%,var(--bg-light) 100%);color:var(--text-dark);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6}header{background:var(--white);box-shadow:0 2px 8px var(--shadow);position:sticky;top:0;z-index:100}.header-wrap{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:16px}.brand img{height:56px;width:auto}.brand-text h1{font-size:20px;color:var(--primary-blue);font-weight:700}.brand-text p{font-size:13px;color:var(--text-muted);margin-top:2px}nav{display:flex;align-items:center;gap:12px}nav a{color:var(--text-dark);text-decoration:none;padding:8px 16px;border-radius:6px;font-weight:500;transition:all .3s ease}nav a:hover{background:var(--bg-blue-light);color:var(--primary-blue)}.nav-cta{background:linear-gradient(135deg,var(--primary-blue),#1E4A8C);color:var(--white)!important;padding:10px 20px!important;box-shadow:0 4px 12px rgba(46,90,172,.3)}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(46,90,172,.4)}.hero{background:linear-gradient(135deg,var(--primary-blue) 0%,#1E4A8C 50%,var(--accent-gold) 100%);color:var(--white);padding:80px 24px;text-align:center}.hero-content{max-width:900px;margin:0 auto}.hero h2{font-size:48px;font-weight:800;margin-bottom:16px;line-height:1.2;background:linear-gradient(135deg,var(--white),var(--light-gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero .tagline{font-size:24px;color:var(--bg-cream);margin-bottom:12px;font-weight:600}.hero .description{font-size:18px;color:rgba(255,255,255,.9);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto}.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}.btn{padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;transition:all .3s ease;display:inline-block}.btn-primary{background:var(--accent-gold);color:var(--text-dark);box-shadow:0 4px 12px rgba(212,175,55,.4)}.btn-primary:hover{background:var(--light-gold);transform:translateY(-2px);box-shadow:0 6px 16px rgba(212,175,55,.5)}.btn-secondary{background:var(--white);color:var(--primary-blue);box-shadow:0 4px 12px rgba(255,255,255,.3)}.btn-secondary:hover{background:var(--bg-cream);transform:translateY(-2px)}.features{max-width:1200px;margin:60px auto;padding:0 24px}.section-header{text-align:center;margin-bottom:48px}.section-header h3{font-size:36px;color:var(--primary-blue);margin-bottom:12px;font-weight:700}.section-header p{font-size:18px;color:var(--text-muted)}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}.feature-card{background:var(--white);border-radius:12px;padding:32px 24px;box-shadow:0 4px 12px var(--shadow);transition:all .3s ease;border:2px solid transparent}.feature-card:hover{transform:translateY(-8px);box-shadow:0 8px 24px var(--shadow);border-color:var(--accent-gold)}.feature-icon{font-size:48px;margin-bottom:16px}.feature-card h4{font-size:22px;color:var(--primary-blue);margin-bottom:12px;font-weight:700}.feature-card p{color:var(--text-muted);font-size:15px;line-height:1.6}.about{background:var(--white);padding:60px 24px;margin:60px 0}.about-content{max-width:1000px;margin:0 auto;text-align:center}.about h3{font-size:36px;color:var(--primary-blue);margin-bottom:24px;font-weight:700}.about p{font-size:18px;color:var(--text-dark);margin-bottom:16px;line-height:1.8}.stats{display:flex;justify-content:center;gap:48px;margin-top:40px;flex-wrap:wrap}.stat{text-align:center}.stat-number{font-size:48px;font-weight:800;background:linear-gradient(135deg,var(--primary-blue),var(--accent-gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.stat-label{font-size:16px;color:var(--text-muted);margin-top:8px}.contact{max-width:700px;margin:60px auto;padding:0 24px}.contact-card{background:var(--white);border-radius:12px;padding:40px;box-shadow:0 4px 12px var(--shadow)}.contact h3{font-size:32px;color:var(--primary-blue);margin-bottom:12px;text-align:center;font-weight:700}.contact p{text-align:center;color:var(--text-muted);margin-bottom:32px}.contact form{display:flex;flex-direction:column;gap:16px}.contact input,.contact textarea{padding:14px;border-radius:8px;border:2px solid var(--bg-blue-light);font-family:inherit;font-size:15px;transition:all .3s ease}.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--primary-blue);box-shadow:0 0 0 3px rgba(46,90,172,.1)}.contact textarea{min-height:120px;resize:vertical}.contact button{background:linear-gradient(135deg,var(--primary-blue),#1E4A8C);color:var(--white);padding:14px 32px;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:all .3s ease}.contact button:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(46,90,172,.4)}footer{background:var(--text-dark);color:var(--white);padding:32px 24px;text-align:center}footer p{margin-bottom:8px}footer a{color:var(--accent-gold);text-decoration:none}footer a:hover{text-decoration:underline}@media (max-width:768px){.hero h2{font-size:36px}.hero .tagline{font-size:20px}.hero .description{font-size:16px}.section-header h3{font-size:28px}.about h3{font-size:28px}.contact h3{font-size:28px}.header-wrap{flex-direction:column}nav{flex-wrap:wrap;justify-content:center}}
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Xenith Brand Labs — AI + Instrumentation</title>
+  <meta name="description" content="Xenith Brand Labs — custom FPGA instruments, AI engineering, and research-driven product prototypes." />
+  <meta name="theme-color" content="#07214b"/>
+  <link rel="icon" href="assets/favicon.ico" />
+  <style>
+    /* Palette from your logo: deep blue, crisp white, warm gold */
+    :root{
+      --blue-900: #05163a;   /* deep background variant */
+      --blue-700: #09407a;   /* primary brand blue */
+      --white: #ffffff;
+      --muted: #c9d3dd;
+      --gold-600: #d4b25a;   /* warm gold */
+      --gold-400: #ffd786;   /* lighter gold accent */
+      --card: rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: linear-gradient(180deg, #061029 0%, #071633 40%, #071a2b 100%);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .site {
+      max-width:1100px;
+      margin:28px auto;
+      padding:22px;
+    }
+
+    /* Header */
+    header {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:8px 12px;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    /* -- NOTE: logo src uses the uploaded local path. Replace with assets/logo-header.png if you uploaded. */
+    .brand img.logo {
+      height:72px;
+      width:auto;
+      border-radius:10px;
+      padding:6px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 10px 34px rgba(2,6,12,0.6);
+      border: 1px solid rgba(255,255,255,0.04);
+      display:block;
+    }
+    .brand .title {
+      line-height:1;
+    }
+    .brand h1{ margin:0; color:var(--white); font-size:18px; letter-spacing:0.3px; }
+    .brand p{ margin:0; color:var(--muted); font-size:12px; }
+
+    nav { display:flex; gap:12px; align-items:center; }
+    nav a { color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; padding:8px 10px; border-radius:10px; }
+    nav a:hover { color:var(--white); background: rgba(255,255,255,0.02); }
+
+    /* Layout */
+    .hero {
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:28px;
+      margin-top:20px;
+      align-items:start;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.02));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: 0 18px 50px rgba(2,6,12,0.65);
+      border:1px solid rgba(255,255,255,0.03);
+      color:var(--muted);
+    }
+
+    .hero .main-card h2 {
+      margin:0 0 12px 0;
+      font-size:34px;
+      color:var(--white);
+      line-height:1.03;
+      letter-spacing:-0.2px;
+    }
+    .lead { color:var(--muted); margin-bottom:18px; font-size:15px; }
+
+    /* Ribbon accent */
+    .ribbon {
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      font-weight:700;
+      color:var(--blue-900);
+      background: linear-gradient(90deg, var(--gold-400), var(--gold-600));
+      box-shadow: 0 6px 20px rgba(212,178,90,0.12);
+      margin-bottom:14px;
+      font-size:13px;
+    }
+
+    .cta-row { display:flex; gap:12px; margin-top:8px; align-items:center; }
+    .btn {
+      background: linear-gradient(90deg, var(--gold-400), var(--gold-600));
+      color: #04101a;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:800;
+      text-decoration:none;
+      box-shadow: 0 10px 30px rgba(212,178,90,0.14);
+      display:inline-block;
+    }
+    .btn.ghost {
+      background:transparent;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:10px 16px;
+      border-radius:12px;
+    }
+
+    /* Feature tiles */
+    .features {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin-top:22px;
+    }
+    .feature {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      padding:14px;
+      border-radius:12px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .feature h4 { margin:0 0 8px; color:var(--white); }
+
+    /* Right column */
+    .aside {
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+    .mockup {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      border-radius:14px;
+      padding:18px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .mockup img { width:100%; border-radius:10px; display:block; }
+
+    /* Lower sections */
+    section#about, section#contact {
+      margin-top:22px;
+    }
+
+    footer {
+      margin-top:28px;
+      color:var(--muted);
+      text-align:center;
+      padding:18px 0;
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width:980px) {
+      .hero { grid-template-columns: 1fr; }
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .brand img.logo { height:64px; }
+    }
+    @media (max-width:560px) {
+      .features { grid-template-columns: 1fr; }
+      .brand { gap:10px; }
+      header { padding:10px; }
+    }
+
+    /* Accessibility helpers */
+    a:focus { outline: 3px solid rgba(255,215,0,0.18); outline-offset:3px; border-radius:8px; }
+  </style>
 </head>
 <body>
+  <div class="site">
     <header>
-        <div class="header-wrap">
-            <div class="brand">
-                <img src="assets/logo.jpg" alt="Xenith Brand Labs logo" />
-                <div class="brand-text">
-                    <h1>Xenith Brand Labs</h1>
-                    <p>AI • Instrumentation • Innovation</p>
-                </div>
-            </div>
-            <nav>
-                <a href="#expertise">Expertise</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="https://www.linkedin.com/in/mahaveer-savanur" target="_blank" class="nav-cta">LinkedIn</a>
-            </nav>
+      <div class="brand">
+        <!-- LOGO: local path you uploaded. If you've put the logo in your repo under assets, change source to "assets/logo-header.png" -->
+        <img src="/mnt/data/logo.jpg" alt="Xenith Brand Labs logo" class="logo" />
+        <div class="title">
+          <h1>Xenith Brand Labs</h1>
+          <p>AI • FPGA Instrumentation • Research</p>
         </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/mahaveersavanur" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
     </header>
+
     <main class="hero">
-        <div class="hero-content">
-            <div class="tagline">🚀 Innovating at the Intersection of Hardware & AI</div>
-            <h2>FPGA Instruments Meet Generative AI</h2>
-            <p class="description">Custom FPGA instruments, AI-driven signal analysis, and research-grade prototyping for engineering education and advanced R&D. Empowering VTU colleges, faculty, and researchers with cutting-edge technology.</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Request Prototype</a>
-                <a href="#expertise" class="btn btn-secondary">Explore Solutions</a>
-            </div>
+      <div class="card main-card">
+        <div class="ribbon">Flagship: Lock-In Amplifier · Moku:Go</div>
+        <h2>Custom FPGA instruments &amp; <span style="background: linear-gradient(90deg,var(--gold-400),var(--gold-600)); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:900;">AI tooling</span> for research-grade prototyping</h2>
+
+        <p class="lead">We design Moku:Go-ready FPGA modules, AI-driven signal analysis pipelines, and product-ready prototypes for labs and companies. Fast iterations, repeatable builds, and production packaging.</p>
+
+        <div class="cta-row">
+          <a class="btn" href="#contact">Request Prototype</a>
+          <a class="btn ghost" href="#products">View Samples</a>
         </div>
+
+        <div class="features" aria-hidden="false">
+          <div class="feature">
+            <h4>Moku:Go Instruments</h4>
+            <div>Lock-ins, demodulators, NCO and MCC packaging — delivered with register maps & tests.</div>
+          </div>
+          <div class="feature">
+            <h4>AI Signal Analysis</h4>
+            <div>Local RAG, inference pipelines, and measurement automation for faster lab work.</div>
+          </div>
+          <div class="feature">
+            <h4>Research Kit</h4>
+            <div>Documentation, test vectors, and step-by-step lab instructions for reproducibility.</div>
+          </div>
+        </div>
+
+        <section id="products" style="margin-top:20px;">
+          <h3 style="color:var(--white); margin-bottom:10px;">Prototype bundles</h3>
+          <p style="color:var(--muted); margin:0 0 12px;">Every delivery includes source, MCC build scripts, register maps, and a step-by-step instruction pack.</p>
+        </section>
+      </div>
+
+      <aside class="aside">
+        <div class="mockup card">
+          <div style="font-weight:700; color:var(--white); margin-bottom:8px;">Prototype mockup</div>
+          <img src="https://images.unsplash.com/photo-1526378729810-5a5c1f1f2f6b?w=1200&q=60&auto=format&fit=crop" alt="Prototype mockup">
+          <div style="margin-top:12px; color:var(--muted); font-size:13px;">
+            <strong style="color:var(--white);">Flagship</strong> — Lock-In Amplifier for Moku:Go<br/>
+            <span style="color:var(--muted);">High-stability demod, NCO, and register plan included.</span>
+          </div>
+        </div>
+
+        <div class="mockup card">
+          <div style="font-weight:700; color:var(--white); margin-bottom:8px;">Contact</div>
+          <div style="color:var(--muted); font-size:14px; margin-bottom:10px;">Describe your measurement or product and we'll send a quote.</div>
+          <a class="btn" href="mailto:contact@xenithbrandlabs.com">Email: contact@xenithbrandlabs.com</a>
+        </div>
+      </aside>
     </main>
-    <section id="expertise" class="features">
-        <div class="section-header">
-            <h3>Four Pillars of Innovation</h3>
-            <p>Comprehensive expertise across hardware, AI, education, and research</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🔧</div>
-                <h4>FPGA & Hardware Engineering</h4>
-                <p>Moku:Go instruments, lock-in amplifiers, demodulators, and custom FPGA designs. 3+ years of testing, calibration, and deployment expertise with Liquid Instruments platforms.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🤖</div>
-                <h4>AI & GenAI Solutions</h4>
-                <p>Custom GPT agents, AI-driven signal analysis pipelines, RAG systems, and automation workflows. Building intelligent systems that bridge hardware and software.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎓</div>
-                <h4>Engineering Education</h4>
-                <p>VTU curriculum development, faculty training programs, and lab instrumentation deployment across engineering colleges. Empowering the next generation of engineers.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔬</div>
-                <h4>Research & Development</h4>
-                <p>Research-grade prototyping, test vectors, measurement automation, and instrumentation documentation for advanced R&D applications and academic research.</p>
-            </div>
-        </div>
+
+    <section id="about" class="card" style="margin-top:22px;">
+      <h3 style="margin-top:0; color:var(--white);">About Mahaveer &amp; Xenith</h3>
+      <p style="color:var(--muted); margin-top:8px;">Xenith Brand Labs is led by Mahaveer Rajendra Savanur — building FPGA instrumentation, AI toolchains, and research-grade prototypes. We merge engineering rigor with local-first AI to accelerate research and productization.</p>
     </section>
-    <section class="about">
-        <div class="about-content">
-            <h3>About Mahaveer & Xenith Brand Labs</h3>
-            <p><strong>Xenith Brand Labs</strong> is led by <strong>Mahaveer R. Savanur</strong>, a technology entrepreneur and engineer-educator with deep expertise in FPGA testing, hardware measurement, and AI integration.</p>
-            <p>As a Junior Engineer at Spruha Build-in Solutions (Liquid Instruments Moku Go dealer), Mahaveer combines 3+ years of hands-on hardware experience with cutting-edge AI innovation to create transformative solutions for engineering education and research.</p>
-            <p>From VTU curriculum approval to faculty development training at institutions like RNSIT, Mahaveer is driving the future of instrumentation education across India.</p>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Engineering Colleges</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Students Impacted</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">AI Projects</div>
-                </div>
-            </div>
+
+    <section id="contact" class="card" style="margin-top:18px;">
+      <h3 style="margin-top:0; color:var(--white);">Contact</h3>
+      <p style="color:var(--muted); margin-top:8px;">Ready to prototype? Send a short description and we'll reply with a proposal.</p>
+      <form action="mailto:contact@xenithbrandlabs.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:10px; margin-top:12px;">
+        <input name="name" placeholder="Your name" style="padding:10px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--white);" />
+        <input name="email" placeholder="Email" style="padding:10px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--white);" />
+        <textarea name="message" placeholder="Short description" rows="4" style="padding:10px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--white);"></textarea>
+        <div style="display:flex; gap:10px;">
+          <button type="submit" class="btn">Send</button>
+          <a class="btn ghost" href="mailto:contact@xenithbrandlabs.com">Email directly</a>
         </div>
+      </form>
     </section>
-    <section id="contact" class="contact">
-        <div class="contact-card">
-            <h3>Get in Touch</h3>
-            <p>Interested in FPGA prototypes, AI solutions, or faculty training? Let's collaborate!</p>
-            <form action="mailto:contact@xenithbrandlabs.com" method="post" enctype="text/plain">
-                <input name="name" placeholder="Your Name" required />
-                <input name="email" type="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Tell us about your project or inquiry" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+
     <footer>
-        <p>© <span id="year"></span> Xenith Brand Labs — Built by Mahaveer R. Savanur</p>
-        <p>Hosted on GitHub Pages • <a href="https://www.linkedin.com/in/mahaveer-savanur" target="_blank">Connect on LinkedIn</a></p>
+      © <span id="year"></span> Xenith Brand Labs — Built by Mahaveer · Hosted on GitHub Pages
     </footer>
-    <script>document.getElementById('year').innerText=new Date().getFullYear();</script>
+  </div>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
